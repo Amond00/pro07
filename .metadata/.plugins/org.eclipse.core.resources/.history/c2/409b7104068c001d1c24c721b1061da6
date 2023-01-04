@@ -1,0 +1,42 @@
+package kr.go.gov.controller;
+
+import javax.servlet.http.HttpSession;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.go.gov.dto.MemberDTO;
+import kr.go.gov.service.MemberService;
+
+
+
+@Controller
+@RequestMapping("/member/")
+public class MemberController {
+	private static final Logger log = LoggerFactory.getLogger(SampleController.class);	
+	
+	@Autowired
+	MemberService memberService;
+	
+	@Autowired
+	HttpSession session;
+	
+	@GetMapping("loginForm")
+	public String loginForm() throws Exception {
+		return "member/loginForm";
+	}
+	
+	@PostMapping("login.do")
+	public String login(MemberDTO dto,@RequestParam String id, @RequestParam String pw ) throws Exception{
+		dto.setId(session.getAttribute("id"));
+		session.getAttribute("pw");
+		
+		return "home";
+	}
+	
+}

@@ -1,0 +1,10 @@
+package kr.go.gov.model;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import kr.go.gov.dto.MemberDTO;
+
+@Mapper
+public class MemberDAO {
+	public MemberDTO login(String id, String pw) throws Exception;
+}

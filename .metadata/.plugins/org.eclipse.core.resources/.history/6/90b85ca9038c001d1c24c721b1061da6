@@ -1,0 +1,10 @@
+package kr.go.gov.model;
+
+import java.util.List;
+
+import kr.go.gov.dto.SampleDTO;
+
+public class MemberDAO {
+	public List<SampleDTO> sampleList() throws Exception;
+	public SampleDTO getSample(String id) throws Exception;
+}
