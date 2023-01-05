@@ -1,0 +1,53 @@
+package kr.go.gov.controller;
+
+import java.util.List;
+
+import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.go.gov.dto.BoardDTO;
+import kr.go.gov.service.BoardService;
+
+@Controller
+@RequestMapping("/board/")
+public class BoardController {
+	
+	@Inject
+	BoardService boardService;
+	
+	@GetMapping("list.do")
+	public String getBoardList(Model model) throws Exception {
+		List<BoardDTO> boardList = boardService.boardList(); 
+		model.addAttribute("boardList", boardList);
+		return "board/boardList";
+	}
+	
+	@GetMapping("detail.do")	//ex : board/detail.do?no=1
+	public String getBoardDetail(HttpServletRequest request, Model model) throws Exception {
+		int no = Integer.parseInt(request.getParameter("no"));
+		BoardDTO dto = boardService.boardDetail(no);
+		model.addAttribute("dto", dto);
+		return "board/boardDetail";
+	}
+	
+	@GetMapping("list2.do")
+	public String getBoardList2(Model model) throws Exception {
+		List<BoardDTO> boardList = boardService.boardList2();
+		model.addAttribute("boardList", boardList);
+		return "board/boardList2";
+	}
+	
+	@GetMapping("detail2.do")
+	public String getBoardDetail2(HttpServletRequest request, Model model) throws Exception {
+		int no = Integer.parseInt(request.getParameter("no"));
+		BoardDTO dto = boardService.boardDetail2(no);
+		model.addAttribute("dto", dto);
+		return "board/boardDetail2";
+	}
+	
+}

@@ -2,8 +2,6 @@ package kr.go.gov.controller;
 
 import javax.servlet.http.HttpSession;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,12 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import kr.go.gov.dto.MemberDTO;
 import kr.go.gov.service.MemberService;
 
-
-
 @Controller
 @RequestMapping("/member/")
 public class MemberController {
-	private static final Logger log = LoggerFactory.getLogger(SampleController.class);	
 	
 	@Autowired
 	MemberService memberService;
@@ -47,5 +42,17 @@ public class MemberController {
 			return "redirect:/member/loginForm";
 		}
 	}
+	
+	@GetMapping("logout.do")
+	public String logout() throws Exception {
+		session.invalidate();
+		return "redirect:/";
+	}
+	
+	@GetMapping("joinForm")
+	public String joinForm() throws Exception {
+		return "member/joinForm";
+	}
+	
 	
 }

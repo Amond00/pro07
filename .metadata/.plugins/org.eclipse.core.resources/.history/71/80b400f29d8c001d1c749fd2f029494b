@@ -1,0 +1,9 @@
+package kr.go.gov.model;
+
+import java.util.List;
+
+import kr.go.gov.dto.BoardDTO;
+
+public interface BoardDAO {
+	public List<BoardDTO> boardList;
+}

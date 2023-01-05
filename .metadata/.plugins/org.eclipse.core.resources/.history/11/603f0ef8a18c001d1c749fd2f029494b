@@ -1,0 +1,36 @@
+package kr.go.gov.model;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
+
+import kr.go.gov.dto.BoardDTO;
+
+@Repository
+public class BoardDAOImpl implements BoardDAO{
+	@Inject
+	SqlSession sqlSession;
+	
+	@Override
+	public List<BoardDTO> boardList() throws Exception{
+		return sqlSession.selectList("board.boardLists");
+	}
+	
+	@Override
+	public BoardDTO boardDetail(int no) throws Exception{
+		return sqlSession.selectOne("board.boardDetail", no);
+	}
+	
+	@Override
+	public List<BoardDTO> boardList2() throws Exception{
+		return sqlSession.selectList("board.boardList2");
+	}
+	
+	@Override
+	public BoardDTO boardDetail2(int no) throws Exception{
+		return sqlSession.selectOne("board.boardDetail2", no);
+	}
+}

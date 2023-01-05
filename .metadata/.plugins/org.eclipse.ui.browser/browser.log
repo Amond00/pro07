@@ -1,0 +1,34 @@
+
+1월 05, 2023 10:17:04.86 NEW SESSION
+1월 05, 2023 10:17:04.86 [10564:8100:0105/101704.862:ERROR:device_event_log_impl.cc(215)] [10:17:04.862] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+1월 05, 2023 10:18:02.72 [10564:9712:0105/101802.720:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+1월 05, 2023 10:18:49.28 [7064:7192:0105/101849.287:ERROR:device_event_log_impl.cc(215)] [10:18:49.286] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+1월 05, 2023 10:19:24.93 [5520:10616:0105/101924.936:ERROR:device_event_log_impl.cc(215)] [10:19:24.936] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+1월 05, 2023 10:20:22.85 [5520:6652:0105/102022.858:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+1월 05, 2023 10:23:42.39 NEW SESSION
+1월 05, 2023 10:23:42.39 [8952:6948:0105/102342.394:ERROR:device_event_log_impl.cc(215)] [10:23:42.394] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+1월 05, 2023 10:24:50.15 [4280:2020:0105/102450.153:ERROR:device_event_log_impl.cc(215)] [10:24:50.153] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+1월 05, 2023 10:25:48.11 [4280:6668:0105/102548.111:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+1월 05, 2023 10:39:29.02 [5572:7224:0105/103929.021:ERROR:device_event_log_impl.cc(215)] [10:39:29.021] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+1월 05, 2023 10:40:27.00 [5572:8280:0105/104027.000:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+1월 05, 2023 10:48:56.21 [5572:7224:0105/104856.212:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.21 [5572:7224:0105/104856.212:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.21 [5572:7224:0105/104856.212:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.21 [5572:7224:0105/104856.212:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.21 [5572:7224:0105/104856.212:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.21 [5572:7224:0105/104856.212:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.21 [5572:7224:0105/104856.212:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.27 [5572:7224:0105/104856.273:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.27 [5572:7224:0105/104856.273:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.27 [5572:7224:0105/104856.274:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.27 [5572:7224:0105/104856.274:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.27 [5572:7224:0105/104856.274:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.27 [5572:7224:0105/104856.274:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.27 [5572:7224:0105/104856.274:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 10:48:56.27 [5572:7224:0105/104856.274:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
+1월 05, 2023 15:40:27.01 [5572:12268:0105/154027.016:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+1월 05, 2023 15:43:37.65 [5572:11828:0105/154337.655:ERROR:connection_factory_impl.cc(472)] ConnectionHandler failed with net error: -2
+1월 05, 2023 16:17:18.81 [5572:7224:0105/161718.814:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading '__widget')", source:  (0)
+1월 05, 2023 17:42:46.63 [5572:7224:0105/174246.632:ERROR:CONSOLE(1)] "Uncaught (in promise) Error: 吏��뿰�맂 DOM �끂�뱶�뒗 �쑀�슚�븳 �끂�뱶濡� 寃곗젙�맆 �닔 �뾾�뒿�땲�떎.", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/elements/elements.js (1)
+1월 05, 2023 18:15:17.03 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)

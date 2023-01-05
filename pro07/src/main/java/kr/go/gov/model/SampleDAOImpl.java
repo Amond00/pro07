@@ -1,6 +1,7 @@
 package kr.go.gov.model;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,11 @@ public class SampleDAOImpl implements SampleDAO {
 	@Override
 	public void addSample(SampleDTO sample) throws Exception {
 		sqlSession.insert("sample.addSample", sample);
+	}
+	
+	@Override
+	public Map<String, String> test1(String id, String pw) throws Exception{
+		sqlSession.select
 	}
 	
 }

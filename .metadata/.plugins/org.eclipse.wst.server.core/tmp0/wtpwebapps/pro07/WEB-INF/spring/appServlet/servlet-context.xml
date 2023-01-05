@@ -16,14 +16,8 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	
 	<resources mapping="/common/**" location="/WEB-INF/views/common" />
-	<resources mapping="/users/**" location="/WEB-INF/views/users" />
-	<resources mapping="/notice/**" location="/WEB-INF/views/notice" />
-	<resources mapping="/util/**" location="/WEB-INF/views/util" />
-	<resources mapping="/qna/**" location="/WEB-INF/views/qna" />
-	<resources mapping="/data/**" location="/WEB-INF/views/data" />
 	<resources mapping="/reservate/**" location="/WEB-INF/views/reservate" />
-	<resources mapping="/static/**" location="/WEB-INF/views/static" />
-	<resources mapping="/research/**" location="/WEB-INF/views/research" />
+	<resources mapping="/assets/**" location="/WEB-INF/views/assets" />
 	<resources mapping="/sample/**" location="/WEB-INF/views/sample" />
 
 	<!-- 뷰(.jsp)에 대한 접두사와 접미사 처리하여 반환할 때의 설정 : 뷰리졸버 설정 -->

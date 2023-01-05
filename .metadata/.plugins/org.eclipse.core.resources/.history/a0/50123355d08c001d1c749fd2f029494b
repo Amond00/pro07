@@ -1,0 +1,37 @@
+package kr.go.gov.service;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kr.go.gov.dto.SampleDTO;
+import kr.go.gov.model.SampleDAO;
+
+@Service
+public class SampleServiceImpl implements SampleService {
+
+	@Autowired
+	SampleDAO sampleDAO;
+	
+	@Override
+	public List<SampleDTO> sampleList() throws Exception {
+		return sampleDao.sampleList();
+	}
+
+	@Override
+	public SampleDTO getSample(String id) throws Exception {
+		return sampleDao.getSample(id);
+	}
+
+	@Override
+	public void addSample(SampleDTO sample) throws Exception {
+		sampleDao.addSample(sample);
+	}
+	
+	@Override
+	public Map<String, String> test1(String id, String pw) throws Exception{
+		sampleDao.add
+	}
+}

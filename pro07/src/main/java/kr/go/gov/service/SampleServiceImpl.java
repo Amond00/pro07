@@ -1,6 +1,7 @@
 package kr.go.gov.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,20 +13,25 @@ import kr.go.gov.model.SampleDAO;
 public class SampleServiceImpl implements SampleService {
 
 	@Autowired
-	SampleDAO sampleDao;
+	SampleDAO sampleDAO;
 	
 	@Override
 	public List<SampleDTO> sampleList() throws Exception {
-		return sampleDao.sampleList();
+		return sampleDAO.sampleList();
 	}
 
 	@Override
 	public SampleDTO getSample(String id) throws Exception {
-		return sampleDao.getSample(id);
+		return sampleDAO.getSample(id);
 	}
 
 	@Override
 	public void addSample(SampleDTO sample) throws Exception {
-		sampleDao.addSample(sample);
+		sampleDAO.addSample(sample);
+	}
+	
+	@Override
+	public Map<String, String> test1(String id, String pw) throws Exception{
+		sampleDAO.
 	}
 }
