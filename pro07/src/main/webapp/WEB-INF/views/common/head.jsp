@@ -48,3 +48,6 @@ $(document).ready(function() {
     } );
 } );
 </script>
+<style>
+	th { text-align: center; }
+</style>

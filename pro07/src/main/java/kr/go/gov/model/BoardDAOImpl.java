@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import kr.go.gov.dto.BoardDTO;
 import kr.go.gov.dto.BoardDTO2;
+import kr.go.gov.dto.BoardDTO3;
 
 @Repository
 public class BoardDAOImpl implements BoardDAO{
@@ -38,7 +39,7 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	@Override
 	public void boardUpdate(BoardDTO dto) throws Exception{
-		sqlSession.insert("board.boardUpdate", dto);
+		sqlSession.update("board.boardUpdate", dto);
 	}
 	
 	@Override
@@ -69,11 +70,58 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	@Override
 	public void boardUpdate2(BoardDTO2 dto) throws Exception{
-		sqlSession.insert("board.boardUpdate2", dto);
+		sqlSession.update("board.boardUpdate2", dto);
 	}
 	
 	@Override
 	public void boardDelete2(int no) throws Exception{
 		sqlSession.delete("board.boardDelete2", no);
 	}
+	
+	//QnA게시판
+	@Override
+	public BoardDTO3 boardParno() throws Exception{
+		return sqlSession.selectOne("board.boardParno");
+	}
+	
+	@Override
+	public List<BoardDTO3> boardList3() throws Exception{
+		return sqlSession.selectList("board.boardList3");
+	}
+	
+	@Override
+	public void boardVisitedUp3(int no) throws Exception{
+		sqlSession.update("board.boardVisitedUp3", no);
+	}
+	
+	@Override
+	public BoardDTO3 boardDetail3(int parno) throws Exception{
+		return sqlSession.selectOne("board.boardDetail3",parno);
+	}
+	@Override
+	public BoardDTO3 boardDetail3_1(int parno) throws Exception{
+		return sqlSession.selectOne("board.boardDetail3_1",parno);
+	}
+	
+	@Override
+	public void boardInsert3(BoardDTO3 dto) throws Exception{
+		sqlSession.insert("board.boardInsert3", dto);
+	}
+	@Override
+	public void boardInsert3_1(BoardDTO3 dto) throws Exception{
+		sqlSession.insert("board.boardInsert3_1", dto);
+	}
+	@Override
+	public void boardUpdate3(BoardDTO3 dto) throws Exception{
+		sqlSession.update("board.boardUpdate3", dto);
+	}
+	@Override
+	public void boardUpdate3_1(BoardDTO3 dto) throws Exception{
+		sqlSession.update("board.boardUpdate3_1", dto);
+	}
+	@Override
+	public void boardDelete3(int parno) throws Exception{
+		sqlSession.delete("board.boardDelete3", parno);
+	}
+	
 }

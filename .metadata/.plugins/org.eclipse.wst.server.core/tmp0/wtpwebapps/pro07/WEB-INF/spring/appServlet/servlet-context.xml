@@ -17,7 +17,6 @@
 	
 	<resources mapping="/common/**" location="/WEB-INF/views/common" />
 	<resources mapping="/reservate/**" location="/WEB-INF/views/reservate" />
-	<resources mapping="/assets/**" location="/WEB-INF/views/assets" />
 	<resources mapping="/sample/**" location="/WEB-INF/views/sample" />
 
 	<!-- 뷰(.jsp)에 대한 접두사와 접미사 처리하여 반환할 때의 설정 : 뷰리졸버 설정 -->

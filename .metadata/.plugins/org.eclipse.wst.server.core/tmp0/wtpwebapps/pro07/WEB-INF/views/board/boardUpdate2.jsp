@@ -14,34 +14,39 @@
 </head>
 <body>
 	<jsp:include page="../common/header.jsp" />
-      <h2>자유게시판 수정</h2>
-      <hr>
-      <form action="/board/update2.do" method="post">
-	      <table class="tb">
-	      	<tbody>
-	      		<tr>
-	      			<th>글 번호</th>
-	      			<td><textarea readonly id="no" name="no">${dto.no }</textarea></td>
-	      		</tr>	
-	      		<tr>
-	      			<th>글 제목</th>
-	      			<td><textarea id="title" name="title">${dto.title }</textarea></td>
-	      		</tr>
-	      		<tr>
-	      			<th>글 내용</th>
-	      			<td><textarea id="content" name="content">${dto.content }</textarea></td>
-	      		</tr>
-	      		<tr>
-	      			<th>작성자</th>
-	      			<td><textarea readonly>${dto.author }</textarea></td>
-	      		</tr>
-	      	</tbody>
-	      </table>
-      <button type="submit">수정</button>
-      </form>
-      <div class="button-group">
-		  <a class="button" href="${path1 }/board/list2.do">목록으로 돌아가기</a>
-      </div>	
+	<section class="content">
+		<div class="container">
+		      <h2 style="text-align: center;">자유게시판 수정</h2>
+		      <hr>
+		      <form action="/board/update2.do" method="post">
+			      <table class="tb">
+			      	<tbody>
+			      		<tr>
+			      			<th>글 번호</th>
+			      			<td><textarea readonly id="no" name="no">${dto.no }</textarea></td>
+			      		</tr>	
+			      		<tr>
+			      			<th>글 제목</th>
+			      			<td><textarea id="title" name="title">${dto.title }</textarea></td>
+			      		</tr>
+			      		<tr>
+			      			<th>글 내용</th>
+			      			<td><textarea id="content" name="content">${dto.content }</textarea></td>
+			      		</tr>
+			      		<tr>
+			      			<th>작성자</th>
+			      			<td><textarea readonly>${dto.author }</textarea></td>
+			      		</tr>
+			      	</tbody>
+			      </table>
+		      <button class="btn btn-primary" type="submit">수정</button>
+		      </form>
+		      <hr>
+		      <div class="button-group" style="margin-top:5px; ">
+				  <a class="btn btn-primary" href="${path1 }/board/list2.do">목록으로 돌아가기</a>
+		      </div>
+		</div>
+	</section>	
 	<jsp:include page="../common/footer.jsp" />
 </body>
 </html>

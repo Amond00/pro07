@@ -4,6 +4,7 @@ import java.util.List;
 
 import kr.go.gov.dto.BoardDTO;
 import kr.go.gov.dto.BoardDTO2;
+import kr.go.gov.dto.BoardDTO3;
 
 public interface BoardDAO {
 	public List<BoardDTO> boardList() throws Exception;
@@ -19,4 +20,16 @@ public interface BoardDAO {
 	public void boardInsert2(BoardDTO2 dto) throws Exception;
 	public void boardUpdate2(BoardDTO2 dto) throws Exception;
 	public void boardDelete2(int no) throws Exception;
+	
+	public List<BoardDTO3> boardList3() throws Exception;
+	public void boardVisitedUp3(int no) throws Exception;
+	public BoardDTO3 boardDetail3(int parno) throws Exception;
+	public BoardDTO3 boardDetail3_1(int parno) throws Exception;
+	
+	public BoardDTO3 boardParno() throws Exception;
+	public void boardInsert3(BoardDTO3 dto) throws Exception;
+	public void boardInsert3_1(BoardDTO3 dto) throws Exception;
+	public void boardUpdate3(BoardDTO3 dto) throws Exception;
+	public void boardUpdate3_1(BoardDTO3 dto) throws Exception;
+	public void boardDelete3(int parno) throws Exception;
 }

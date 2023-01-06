@@ -4,7 +4,9 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.go.gov.dto.BoardDTO;
 import kr.go.gov.dto.BoardDTO2;
+import kr.go.gov.dto.BoardDTO3;
 import kr.go.gov.service.BoardService;
 
 @Controller
@@ -21,6 +24,9 @@ public class BoardController {
 	
 	@Inject
 	BoardService boardService;
+	
+	@Autowired
+	HttpSession session;
 	//공지사항
 	@GetMapping("list.do")
 	public String getBoardList(Model model) throws Exception {
@@ -133,6 +139,87 @@ public class BoardController {
 		int no = Integer.parseInt(request.getParameter("no"));
 		boardService.boardDelete2(no);
 		return "redirect:list2.do";
+	}
+	
+	//QnA게시판
+	@GetMapping("list3.do")
+	public String getBoardList3(Model model) throws Exception {
+		List<BoardDTO3> boardList = boardService.boardList3();
+		model.addAttribute("boardList", boardList);
+		return "board/boardList3";
+	}
+	
+	@GetMapping("detail3.do")
+	public String getBoardDetail3(HttpServletRequest request, Model model) throws Exception {
+		int no = Integer.parseInt(request.getParameter("no"));
+		int parno = Integer.parseInt(request.getParameter("no"));
+		BoardDTO3 dto1 = boardService.boardDetail3(parno);
+		BoardDTO3 dto2 = boardService.boardDetail3_1(parno);
+		model.addAttribute("dto1", dto1);
+		model.addAttribute("dto2", dto2);
+		boardService.boardVisitedUp3(no);
+		return "board/boardDetail3";
+	}
+	
+	//질문 글 작성
+	@GetMapping("insertForm3.do")
+	public String boardInsertForm3(Model model) throws Exception{
+		BoardDTO3 dto = boardService.boardParno();
+		model.addAttribute("dto", dto);
+		return "board/boardInsert3";
+	}
+	@PostMapping("insert3.do")
+	public String boardInsert3(HttpServletRequest request, BoardDTO3 dto) throws Exception {
+		dto.setTitle(request.getParameter("title"));
+		dto.setContent(request.getParameter("content"));
+		dto.setAuthor(request.getParameter("author"));
+		boardService.boardInsert3(dto);
+		return "redirect:list3.do";
+	}
+	//답변 글 작성
+	@GetMapping("insertForm3_1.do")
+	public String boardInsertForm3_1(HttpServletRequest request,Model model) throws Exception{
+		int parno = Integer.parseInt(request.getParameter("parno"));
+		BoardDTO3 dto1 = boardService.boardDetail3(parno);
+		model.addAttribute("dto1", dto1);
+		return "board/boardInsert3_1";
+	}
+	@PostMapping("insert3_1.do")
+	public String boardInsert3_1(HttpServletRequest request, BoardDTO3 dto) throws Exception {
+		int parno = Integer.parseInt(request.getParameter("parno"));
+		dto.setTitle(request.getParameter("title"));
+		dto.setContent(request.getParameter("content"));
+		dto.setAuthor(request.getParameter("author"));
+		dto.setParno(parno);
+		boardService.boardInsert3_1(dto);
+		return "redirect:list3.do";
+	}
+	
+	//글 수정 폼 질문글, 답변글
+	@GetMapping("updateForm3.do")
+	public String boardUpdateForm3(HttpServletRequest request, Model model) throws Exception{
+		int parno = Integer.parseInt(request.getParameter("parno"));
+		BoardDTO3 dto = boardService.boardDetail3(parno);
+		model.addAttribute("dto", dto);
+		return "board/boardUpdate3";
+	}
+	@GetMapping("updateForm3_1.do")
+	public String boardUpdateForm3_1(HttpServletRequest request, Model model) throws Exception{
+		int parno = Integer.parseInt(request.getParameter("parno"));
+		BoardDTO3 dto = boardService.boardDetail3_1(parno);
+		model.addAttribute("dto", dto);
+		return "board/boardUpdate3_1";
+	}
+	
+	
+	
+	
+	//글 삭제
+	@GetMapping("delete3.do")
+	public String boardDelete3(HttpServletRequest request) throws Exception {
+		int parno = Integer.parseInt(request.getParameter("parno"));
+		boardService.boardDelete3(parno);
+		return "redirect:list3.do";
 	}
 	
 }

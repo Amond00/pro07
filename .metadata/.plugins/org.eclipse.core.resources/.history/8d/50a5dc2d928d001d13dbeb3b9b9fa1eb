@@ -1,0 +1,14 @@
+package kr.go.gov.service;
+
+import java.util.List;
+import java.util.Map;
+
+import kr.go.gov.dto.SampleDTO;
+
+public interface SampleService {
+	public List<SampleDTO> sampleList() throws Exception;
+	public SampleDTO getSample(String id) throws Exception;
+	public void addSample(SampleDTO sample) throws Exception;
+	public void updateSample(SampleDTO sample) throws Exception;
+	public void deleteSample(String id) throws Exception;
+}

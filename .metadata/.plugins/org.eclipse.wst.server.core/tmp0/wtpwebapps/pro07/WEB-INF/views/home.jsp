@@ -9,7 +9,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
  	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>대한민국 외교부</title>
+	<title>환경부</title>
 	<jsp:include page="./common/head.jsp" />
 </head>
 <body>
@@ -20,27 +20,27 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Moderna</span></h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+          <h2 class="animate__animated animate__fadeInDown">국민이 안심할 수 있는 환경,<br> 탄소 중립으로 도약하는 대한민국</h2>
+          <p class="animate__animated animate__fadeInUp">1월 6일, 부산·울산 초미세먼지 비상저감조치 </p>
+          <a href="http://me.go.kr/home/web/board/read.do?menuId=10525&boardId=1572660&boardMasterId=1" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+          <h2 class="animate__animated animate__fadeInDown">국민이 안심할 수 있는 환경,<br> 탄소 중립으로 도약하는 대한민국</h2>
+          <p class="animate__animated animate__fadeInUp">2023년 환경부 업무보고</p>
+          <a href="http://www.me.go.kr/2023briefing/index.html" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+          <h2 class="animate__animated animate__fadeInDown">국민이 안심할 수 있는 환경,<br> 탄소 중립으로 도약하는 대한민국</h2>
+          <p class="animate__animated animate__fadeInUp">저소득층 가정용 저녹스 보일러 지원</p>
+          <a href="http://me.go.kr/home/web/board/read.do?pagerOffset=0&maxPageItems=6&maxIndexPages=10&searchValue=&menuId=10392&orgCd=&boardId=1561920&boardMasterId=713&boardCategoryId=&rn=5" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
         </div>
       </div>
 
@@ -105,7 +105,7 @@
 
         <div class="row">
           <div class="col-lg-6 video-box">
-            <img src="assets/img/why-us.jpg" class="img-fluid" alt="">
+            <img src="${path1}/resources/img/why-us.jpg" class="img-fluid" alt="">
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
@@ -140,7 +140,7 @@
 
         <div class="row" data-aos="fade-up">
           <div class="col-md-5">
-            <img src="assets/img/features-1.svg" class="img-fluid" alt="">
+            <img src="${path1}/resources/img/features-1.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-4">
             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
@@ -157,7 +157,7 @@
 
         <div class="row" data-aos="fade-up">
           <div class="col-md-5 order-1 order-md-2">
-            <img src="assets/img/features-2.svg" class="img-fluid" alt="">
+            <img src="${path1}/resources/img/features-2.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
             <h3>Corporis temporibus maiores provident</h3>
@@ -175,7 +175,7 @@
 
         <div class="row" data-aos="fade-up">
           <div class="col-md-5">
-            <img src="assets/img/features-3.svg" class="img-fluid" alt="">
+            <img src="${path1}/resources/img/features-3.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5">
             <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
@@ -190,7 +190,7 @@
 
         <div class="row" data-aos="fade-up">
           <div class="col-md-5 order-1 order-md-2">
-            <img src="assets/img/features-4.svg" class="img-fluid" alt="">
+            <img src="${path1}/resources/img/features-4.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
             <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>

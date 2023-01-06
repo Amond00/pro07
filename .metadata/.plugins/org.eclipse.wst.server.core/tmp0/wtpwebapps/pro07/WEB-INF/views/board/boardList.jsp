@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
+<c:if test="${not empty sid}">
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,10 +22,10 @@
 		      <table class="tb">
 		      	<thead>
 		      		<tr>
-		      			<th width="80">번호</th>
-		      			<th width="100">제목</th>
-		      			<th width="100">작성자</th>	
-		      			<th width="100">작성일</th>
+		      			<th width="40">번호</th>
+		      			<th width="200">제목</th>
+		      			<th width="40">작성자</th>	
+		      			<th width="80">작성일</th>
 		      		</tr>
 		      	</thead>
 		      	<tbody>
@@ -38,11 +39,22 @@
 		      	</c:forEach>	
 		      	</tbody>
 		      </table>
-		      <div class="button-group">
-					<a class="button" href="${path1 }/board/insertForm.do">글쓰기</a>
-			  </div>
+		      <c:if test="${sid=='admin'}">
+			      <div class="button-group" style="margin-top:5px; ">
+						<a class="btn btn-primary" href="${path1 }/board/insertForm.do">글쓰기</a>
+				  </div>
+			  </c:if>
 		</div>
 	</section>
 <jsp:include page="../common/footer.jsp" />
 </body>
 </html>
+</c:if>
+<c:if test="${empty sid}">
+	<script>
+        window.setTimeout(function(){
+            alert("로그인시 열람할 수 있습니다");
+            location.href="/";
+        });
+    </script>
+</c:if>

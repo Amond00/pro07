@@ -14,41 +14,46 @@
 </head>
 <body>
 	<jsp:include page="../common/header.jsp" />
-      <h2>공지사항 상세 보기</h2>
-      <hr>
-      <table class="tb">
-      	<tbody>
-      		<tr>
-      			<th>글 번호</th>
-      			<td>${dto.no }</td>
-      		</tr>	
-      		<tr>
-      			<th>글 제목</th>
-      			<td>${dto.title }</td>
-      		</tr>
-      		<tr>
-      			<th>글 내용</th>
-      			<td>${dto.content }</td>
-      		</tr>
-      		<tr>
-      			<th>작성자</th>
-      			<td>${dto.author }</td>
-      		</tr>
-      		<tr>
-      			<th>작성일시</th>
-      			<td>${dto.resdate }</td>
-      		</tr>
-      		<tr>
-      			<th>방문횟수</th>
-      			<td>${dto.visited }</td>
-      		</tr>
-      	</tbody>
-      </table>
-      <div class="button-group">
-		  <a class="button" href="${path1 }/board/list.do">목록으로 돌아가기</a>
-		  <a class="button" href="${path1 }/board/updateForm.do?no=${dto.no}">글 수정</a>
-		  <a class="button" href="${path1 }/board/delete.do?no=${dto.no}">글 삭제</a>
-      </div>	
+	<section class="content">
+		<div class="container">
+      	<h2 style="text-align: center;">공지사항 상세 보기</h2>
+	      <hr>
+	      <table class="tb">
+	      	<tbody>
+	      		<tr>
+	      			<th>글 번호</th>
+	      			<td>${dto.no }</td>
+	      		</tr>	
+	      		<tr>
+	      			<th>글 제목</th>
+	      			<td>${dto.title }</td>
+	      		</tr>
+	      		<tr>
+	      			<th>글 내용</th>
+	      			<td>${dto.content }</td>
+	      		</tr>
+	      		<tr>
+	      			<th>작성자</th>
+	      			<td>${dto.author }</td>
+	      		</tr>
+	      		<tr>
+	      			<th>작성일시</th>
+	      			<td>${dto.resdate }</td>
+	      		</tr>
+	      		<tr>
+	      			<th>방문횟수</th>
+	      			<td>${dto.visited }</td>
+	      		</tr>
+	      	</tbody>
+	      </table>
+	      <hr>
+	      <div class="button-group" style="margin-top:5px; ">
+			  <a class="btn btn-primary" href="${path1 }/board/list.do">목록으로 돌아가기</a>
+			  <a class="btn btn-primary" href="${path1 }/board/updateForm.do?no=${dto.no}">글 수정</a>
+			  <a class="btn btn-primary" href="${path1 }/board/delete.do?no=${dto.no}">글 삭제</a>
+	      </div>	
+     	</div>
+     </section>
 	<jsp:include page="../common/footer.jsp" />
 </body>
 </html>

@@ -14,30 +14,35 @@
 </head>
 <body>
 	<jsp:include page="../common/header.jsp" />
-      <h2>공지사항 글쓰기</h2>
-      <hr>
-      <form action="/board/insert.do" method="post">
-	      <table class="tb">
-	      	<tbody>	
-	      		<tr>
-	      			<th>글 제목</th>
-	      			<td><textarea id="title" name="title"></textarea></td>
-	      		</tr>
-	      		<tr>
-	      			<th>글 내용</th>
-	      			<td><textarea id="content" name="content"></textarea></td>
-	      		</tr>
-	      		<tr>
-	      			<th>작성자</th>
-	      			<td><textarea id="author" name="author" readonly>${sid }</textarea></td>
-	      		</tr>
-	      	</tbody>
-	      </table>
-	      <button type="submit">글쓰기</button>
-      </form>
-      <div class="button-group">
-		  <a class="button" href="${path1 }/board/list.do">목록으로 돌아가기</a>
-      </div>	
+	<section class="content">
+		<div class="container">
+		      <h2 style="text-align: center;">공지사항 글쓰기</h2>
+		      <hr>
+		      <form action="/board/insert.do" method="post">
+			      <table class="tb">
+			      	<tbody>	
+			      		<tr>
+			      			<th>글 제목</th>
+			      			<td><textarea id="title" name="title"></textarea></td>
+			      		</tr>
+			      		<tr>
+			      			<th>글 내용</th>
+			      			<td><textarea id="content" name="content"></textarea></td>
+			      		</tr>
+			      		<tr>
+			      			<th>작성자</th>
+			      			<td><input id="author" name="author" value="${sid }" readonly></td>
+			      		</tr>
+			      	</tbody>
+			      </table>
+			      <button class="btn btn-primary" type="submit">글쓰기</button>
+		      </form>
+		      <hr>
+		      <div class="button-group" style="margin-top:5px; ">
+				  <a class="btn btn-primary" href="${path1 }/board/list.do">목록으로 돌아가기</a>
+		      </div>	
+		</div>
+	</section>
 	<jsp:include page="../common/footer.jsp" />
 </body>
 </html>
