@@ -12,6 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>공지사항</title>
 	<jsp:include page="../common/head.jsp" />
+	<style>
+    	th{background-color:#17455e; color:white; }
+    </style>
 </head>
 <body>
 	<jsp:include page="../common/header.jsp" />

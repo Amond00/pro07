@@ -36,6 +36,7 @@
           <ul>
 	         <c:if test="${empty sid}">
 				<li><a href="/member/loginForm">로그인</a></li>
+				<li><a href="/member/joinForm">회원가입</a></li>
 				<li><a href="/board/list.do">공지사항</a></li>
 				<li><a href="/board/list2.do">자유게시판</a></li>
 				<li><a href="/board/list3.do">QnA게시판</a></li>

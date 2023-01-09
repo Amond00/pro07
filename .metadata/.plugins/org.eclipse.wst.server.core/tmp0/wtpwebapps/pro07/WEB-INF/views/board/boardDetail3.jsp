@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>QnA게시판</title>
     <jsp:include page="../common/head.jsp" />
+    <style>
+    	th{background-color:#17455e; color:white; }
+    </style>
 </head>
 <body>
 	<jsp:include page="../common/header.jsp" />
@@ -21,62 +24,58 @@
 		      <table class="tb">
 		      	<tbody>
 		      		<tr>
-		      			<th>고유 번호</th>
+		      			<th style="width:150px;">고유 번호</th>
 		      			<td>${dto1.parno }</td>
-		      		</tr>	
+		      		</tr>		      		
 		      		<tr>
-		      			<th>질문글 번호</th>
-		      			<td>${dto1.no }</td>
-		      		</tr>
-		      		<tr>
-		      			<th>질문글 제목</th>
+		      			<th style="width:150px;">질문글 제목</th>
 		      			<td>${dto1.title }</td>
 		      		</tr>
 		      		<tr>
-		      			<th>질문글 내용</th>
+		      			<th style="width:150px;">질문글 내용</th>
 		      			<td>${dto1.content }</td>
 		      		</tr>
 		      		<tr>
-		      			<th>질문 작성자</th>
+		      			<th style="width:150px;">질문 작성자</th>
 		      			<td>${dto1.author }</td>
 		      		</tr>
 		      		<tr>
-		      			<th>작성일시</th>
+		      			<th style="width:150px;">작성일시</th>
 		      			<td>${dto1.resdate }</td>
 		      		</tr>
 		      		
 		      		<tr>
-		      			<th>조회수</th>
+		      			<th style="width:150px;">조회수</th>
 		      			<td>${dto1.visited }</td>
 		      		</tr>
 		      	</tbody>
 		      	<c:if test="${not empty dto2}">
 		      	<tbody>
 		      		<tr>
-		      			<th>답변글 번호</th>
+		      			<th style="width:150px;">답변글 번호</th>
 		      			<td>${dto2.no }</td>
 		      		</tr>	
 		      		<tr>
-		      			<th>답변글 제목</th>
+		      			<th style="width:150px;">답변글 제목</th>
 		      			<td>${dto2.title }</td>
 		      		</tr>
 		      		<tr>
-		      			<th>답변글 내용</th>
+		      			<th style="width:150px;">답변글 내용</th>
 		      			<td>${dto2.content }</td>
 		      		</tr>
 		      		<tr>
-		      			<th>작성자</th>
+		      			<th style="width:150px;">작성자</th>
 		      			<td>admin</td>
 		      		</tr>
 		      		<tr>
-		      			<th>작성일시</th>
+		      			<th style="width:150px;">작성일시</th>
 		      			<td>${dto2.resdate }</td>
 		      		</tr>
 		      	</tbody>
 		      	</c:if>
 		      	<c:if test="${empty dto2}">
 		      		<tr>
-		      			<th></th>
+		      			<th style="width:150px;"></th>
 		      			<td><h2 style="text-align: center; color:red; font-weight: bolder; ">아직 답변이 작성되지 않았습니다. </h2></td>
 		      		<tr>
 		      	</c:if>

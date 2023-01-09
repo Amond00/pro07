@@ -1,0 +1,29 @@
+package kr.go.gov.model;
+
+import javax.inject.Inject;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
+
+import kr.go.gov.dto.MemberDTO;
+
+@Repository
+public class MemberDAOImpl implements MemberDAO {
+	
+	@Inject
+	SqlSession sqlSession;
+	
+	@Override
+	public MemberDTO login(MemberDTO dto) throws Exception {
+		return sqlSession.selectOne("member.login", dto);
+	}
+	
+	@Override
+	public String idck(String id) throws Exception {	
+		return sqlSession.selectOne("member.idck", id);
+	}
+	@Override
+	public void join(MemberDTO dto) throws Exception {
+		sqlSession.insert("member.join", dto);
+	}
+}

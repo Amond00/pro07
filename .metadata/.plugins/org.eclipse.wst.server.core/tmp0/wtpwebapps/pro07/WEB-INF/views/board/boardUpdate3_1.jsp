@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>자유게시판</title>
     <jsp:include page="../common/head.jsp" />
+    <style>
+    	th{background-color:#17455e; color:white; }
+    </style>
 </head>
 <body>
 	<jsp:include page="../common/header.jsp" />
@@ -22,24 +25,24 @@
 			      <table class="tb">
 			      	<tbody>
 			      		<tr>
-			      			<th>글 번호</th>
+			      			<th style="width:150px;">글 번호</th>
 			      			<td><textarea readonly id="no" name="no">${dto.no }</textarea></td>
 			      		</tr>	
 			      		<tr>
-			      			<th>글 제목</th>
-			      			<td><textarea id="title" name="title">${dto.title }</textarea></td>
+			      			<th style="width:150px;">글 제목</th>
+			      			<td><textarea id="title" name="title" cols="100" rows="1" maxlength="150">${dto.title }</textarea></td>
 			      		</tr>
 			      		<tr>
-			      			<th>글 내용</th>
-			      			<td><textarea id="content" name="content">${dto.content }</textarea></td>
+			      			<th style="width:150px;">글 내용</th>
+			      			<td><textarea id="content" name="content" cols="100" rows="10" maxlength="800">${dto.content }</textarea></td>
 			      		</tr>
 			      		<tr>
-			      			<th>작성자</th>
+			      			<th style="width:150px;">작성자</th>
 			      			<td><textarea readonly>${dto.author }</textarea></td>
 			      		</tr>
 			      	</tbody>
 			      </table>
-		      <button class="btn btn-primary" type="submit">수정</button>
+		      <button class="btn btn-primary" type="submit" style="margin-top:50px;">수정</button>
 		      </form>
 		      <hr>
 		      <div class="button-group" style="margin-top:5px; ">

@@ -65,6 +65,14 @@
         </div>
       </div>
     </section><!-- End Contact Section -->
+    <script>
+    $(document).ready(function(){
+    	var result = '${loginck}';
+    	if(result!=''){
+    		alert(result);
+    	}
+    });
+    </script>
 	<jsp:include page="../common/footer.jsp" />
 </body>
 </html>

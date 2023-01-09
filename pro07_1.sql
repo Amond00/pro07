@@ -13,15 +13,15 @@ create table member(
 id varchar(100) primary key, 
 pw varchar(500) not null, 
 name varchar(100) not null,
+email varchar(200),
 address varchar(200),
 tel varchar(100),
 regdate datetime default now(),
 visited int default 0
 ); 
-select * from member where id='hth' and pw='1234';
-insert into member values ('hth','1234','한태헌','지구','010-1111-1111',default,default);
-insert into member values ('admin','1234','관리자','지구','010-1111-1111',default,default);
-
+select * from member;
+insert into member values ('hth','1234','한태헌','hth@naver.com','지구','010-1111-1111',default,default);
+insert into member values ('admin','1234','관리자','admin@naver.com','지구','010-1111-1111',default,default);
 create table board(
 no int auto_increment primary key,
 title varchar(200) not null,

@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>QnA게시판</title>
     <jsp:include page="../common/head.jsp" />
+    <style>
+    	th{background-color:#17455e; color:white; }
+    </style>
 </head>
 <body>
 	<jsp:include page="../common/header.jsp" />
@@ -27,11 +30,11 @@
 			      		</tr>
 			      		<tr>
 			      			<th>글 제목</th>
-			      			<td><textarea id="title" name="title" maxlength=""></textarea></td>
+			      			<td><textarea id="title" name="title" cols="100" rows="1" maxlength="150"></textarea></td>
 			      		</tr>
 			      		<tr>
 			      			<th>글 내용</th>
-			      			<td><textarea id="content" name="content"></textarea></td>
+			      			<td><textarea id="content" name="content" cols="100" rows="10" maxlength="800"></textarea></td>
 			      		</tr>
 			      		<tr>
 			      			<th>작성자</th>
@@ -39,7 +42,7 @@
 			      		</tr>
 			      	</tbody>
 			      </table>
-			      <button class="btn btn-primary" type="submit">글쓰기</button>
+			      <button class="btn btn-primary" type="submit" style="margin-top:50px;">글쓰기</button>
 		      </form>
 		      <hr>
 		      <div class="button-group" style="margin-top:5px; ">

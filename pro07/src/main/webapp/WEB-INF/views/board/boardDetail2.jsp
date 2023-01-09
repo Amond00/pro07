@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>자유게시판</title>
     <jsp:include page="../common/head.jsp" />
+    <style>
+    	th{background-color:#17455e; color:white; }
+    </style>
 </head>
 <body>
 	<jsp:include page="../common/header.jsp" />
@@ -21,27 +24,27 @@
 		      <table class="tb">
 		      	<tbody>
 		      		<tr>
-		      			<th>글 번호</th>
+		      			<th style="width:150px;">글 번호</th>
 		      			<td>${dto.no }</td>
 		      		</tr>	
 		      		<tr>
-		      			<th>글 제목</th>
+		      			<th style="width:150px;">글 제목</th>
 		      			<td>${dto.title }</td>
 		      		</tr>
 		      		<tr>
-		      			<th>글 내용</th>
+		      			<th style="width:150px;">글 내용</th>
 		      			<td>${dto.content }</td>
 		      		</tr>
 		      		<tr>
-		      			<th>작성자</th>
+		      			<th style="width:150px;">작성자</th>
 		      			<td>${dto.author }</td>
 		      		</tr>
 		      		<tr>
-		      			<th>작성일시</th>
+		      			<th style="width:150px;">작성일시</th>
 		      			<td>${dto.resdate }</td>
 		      		</tr>
 		      		<tr>
-		      			<th>방문횟수</th>
+		      			<th style="width:150px;">방문횟수</th>
 		      			<td>${dto.visited }</td>
 		      		</tr>
 		      	</tbody>

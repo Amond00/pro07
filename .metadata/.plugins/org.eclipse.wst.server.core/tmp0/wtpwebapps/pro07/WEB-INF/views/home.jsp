@@ -58,14 +58,16 @@
   <main id="main">
 
     <!-- ======= Services Section ======= -->
+    
     <section class="services">
       <div class="container">
 
         <div class="row">
+        	<h1 style="text-align: center">공지 소식·알림</h1>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
             <div class="icon-box icon-box-pink">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <div class="icon"><i style="font-size:10px">알림판</i></div>
+              <h4 class="title"><a href="">국립공원 내 사유지 매수를 위해 국비 700억 원 투입</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
             </div>
           </div>
@@ -73,7 +75,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box icon-box-cyan">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+              <h4 class="title"><a href="">배출권거래제 참여업체 온실가스 감축 돕는다</a></h4>
               <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
             </div>
           </div>
@@ -81,7 +83,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box icon-box-green">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
+              <h4 class="title"><a href="">1월 8일, 수도권·대구·충남 등 9개 시도고농도 초미세먼지(PM2.5) 비상저감조치 시행</a></h4>
               <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
           </div>
@@ -89,7 +91,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box icon-box-blue">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <h4 class="title"><a href="">내일(1월 7일) 충남·광주·전북·전남·제주 황사 영향권, 국민건강 유의</a></h4>
               <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
             </div>
           </div>
@@ -210,7 +212,16 @@
     </section><!-- End Features Section -->
 
   </main><!-- End #main -->
-	
+	<script>
+    $(document).ready(function(){
+    	var result = '${joinck}';
+    	if(result!=''){
+    		alert(result);
+    	}
+    	
+
+    });
+    </script>
 	<jsp:include page="./common/footer.jsp" />
 </body>
 </html>
