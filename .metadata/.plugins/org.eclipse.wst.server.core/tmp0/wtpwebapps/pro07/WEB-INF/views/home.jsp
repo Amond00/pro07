@@ -62,39 +62,15 @@
     <section class="services">
       <div class="container">
 
-        <div class="row">
-        	<h1 style="text-align: center">공지 소식·알림</h1>
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+        <div class="row board">
+        	<h1 style="text-align:center; margin-bottom:40px;">공지 소식·알림</h1>
+          <%-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
             <div class="icon-box icon-box-pink">
-              <div class="icon"><i style="font-size:10px">알림판</i></div>
-              <h4 class="title"><a href="">국립공원 내 사유지 매수를 위해 국비 700억 원 투입</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <div class="icon"><img src="${path1 }/resources/img/main_img2.png" alt="문서" style="width: 42px;"></div>
+              <h4 class="title"><a class="main_board" href=""></a></h4>
+              <p class="description"></p>
             </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box icon-box-cyan">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">배출권거래제 참여업체 온실가스 감축 돕는다</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-green">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">1월 8일, 수도권·대구·충남 등 9개 시도고농도 초미세먼지(PM2.5) 비상저감조치 시행</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box icon-box-blue">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">내일(1월 7일) 충남·광주·전북·전남·제주 황사 영향권, 국민건강 유의</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
+          </div> --%>
 
         </div>
 
@@ -107,21 +83,21 @@
 
         <div class="row">
           <div class="col-lg-6 video-box">
-            <img src="${path1}/resources/img/why-us.jpg" class="img-fluid" alt="">
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            <img src="${path1}/resources/img/main_img1.jpg" class="img-fluid" alt="환경부 유튜브 2023">
+            <a href="https://www.youtube.com/watch?v=GsmSwgNL4KA" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <h4 class="title"><a href="" class="youtube_btn1">환경부 </a></h4>
+              <p class="description">윤석열 대통령 2023년 국토교통·환경 정책방향 보고 참석! 국토교통부와 환경부의 업무보고 현장과 모두발언 풀버전</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <h4 class="title"><a href="" class="youtube_btn2">Nemo Enim</a></h4>
               <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
             </div>
 
@@ -212,13 +188,62 @@
     </section><!-- End Features Section -->
 
   </main><!-- End #main -->
+  	<!-- 공지사항 섹션 로딩 -->
+  	<!-- <script>
+  	$(document).ready(function(){
+		$.ajax({
+			url:"${path1 }/main_board.do",	
+			type:"GET",		//전송방식
+			dataType:"json",//데이터 반환 방식
+			success:function(list){
+				console.log(list.list);
+				var list = list.list;
+				if(list==null){ //로딩 실패
+					alert("로딩에 실패하였습니다.");
+				} else if(list!=null){ //로딩 성공
+					alert("로딩 성공");	
+					$.each(list, function(index, key, value){
+						alert('인덱스'+index+' : 키값'+key.title);
+						$(".main_board").append(key.title);
+						
+					});
+				} else if(list==""){
+					alert("공지사항이 확인되지 않습니다.");
+				}
+			}
+		});
+  	});
+  	</script> -->
+  	<script>
+  	$(document).ready(function(){
+		$.ajax({
+			url:"/main_board2.do",	
+			type:"GET",		//전송방식
+			dataType:"json",//데이터 반환 방식
+			success:function(list){
+				$.each(list, function(k, v){
+					var data = "<div class='col-md-6 col-lg-3 d-flex align-items-stretch' data-aos='fade-up'><div class='icon-box icon-box-pink'><div class='icon'><img src='${path1 }/resources/img/main_img2.png' alt='문서' style='width: 42px;''></div>"
+					data = data+"<h4 class='title'><a class='main_board_title' href='/board/detail.do?no="+v.no+"'>"+v.title+"</a></h4>"
+					data = data+"<p class='description main_board_content'></p></div></div></div>"
+					$(".board").append(data);
+					
+				});
+			}
+		});
+		//여백 제거
+		$(".breadcrumbs").remove();
+		$("youtube_btn1").click(function(){
+			$(".venobox").attr("href", "https://www.youtube.com/watch?v=reZl5j7oeTQ");
+		});
+		
+  	});
+  	</script>
 	<script>
     $(document).ready(function(){
     	var result = '${joinck}';
     	if(result!=''){
     		alert(result);
     	}
-    	
 
     });
     </script>

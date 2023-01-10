@@ -8,7 +8,7 @@
   <div class="container d-flex justify-content-between align-items-center">
   
     <div class="logo">
-    	<a href="/"><img src="http://me.go.kr/images/home/main/2018/logo.png" alt="로고" class="img-fluid"></a>
+    	<a href="/"><img src="${path1 }/resources/img/logo.png" alt="로고" class="img-fluid"></a>
     </div>
     
     <nav id="navbar" class="navbar">

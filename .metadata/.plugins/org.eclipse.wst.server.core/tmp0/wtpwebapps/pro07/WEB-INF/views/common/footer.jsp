@@ -66,8 +66,8 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>주소 :</h4>
             <p>
-          	  03172 서울특별시 종로구 사직로8길 60 | <br> (여권영사민원실) 서울특별시 서초구 남부순환로 2558 외교타운 6층
-              <strong>Phone:</strong><br> 02.2100.2114(주간),<br> 02.3210.0404(영사콜센터, 24시간)<br>
+          	  03172 서울특별시 종로구 사직로8길 60 | <br> (여권영사민원실) 서울특별시 서초구 남부순환로 2558 외교타운 6층<br>
+              <strong>Phone:</strong> 02.2100.2114(주간),<br> 02.3210.0404(영사콜센터, 24시간)<br>
               <strong>Email:</strong> dhlryqn@naver.com<br>
             </p>
 
@@ -76,9 +76,7 @@
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>민원실 : 1577-8866</h3>
             <p>
-            - 본 누리집의 내용은 저작권법에 의해 보호를 받는 저작물로서, 이에 대한 무단 복제 및 배포를 원칙적으로 금하며 누리집에 게재된 이메일 주소의 수집을 거부합니다.<br>
-			이를 위반 시 관련법에 의해 처벌됨을 알려드립니다.<br>
-			- 누리집 저작권은 환경부에 있습니다.
+				- 누리집 저작권은 환경부에 있습니다.
             </p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>

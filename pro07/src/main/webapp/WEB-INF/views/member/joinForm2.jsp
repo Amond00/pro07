@@ -33,7 +33,7 @@
 	                    <div class="form-outline flex-fill mb-0">
 	                      <input type="text" id="id" name="id" class="form-control" required/>
 	                      <input type="hidden" name="idck" id="idck" value="no"/>
-	                      <label class="form-label" for="form3Example1c">아이디</label>
+	                      <label class="form-label" for="form3Example1c">*아이디</label>
 	                      <c:if test="${empty qid }">
 								<p id="msg" style="color:red;">아이디 중복 체크를 하지 않으셨습니다.</p>
 						  </c:if>
@@ -47,9 +47,9 @@
 	                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
 	                    <div class="form-outline flex-fill mb-0">
 	                      <input type="password" id="pw" name="pw" class="form-control" />
-	                      <label class="form-label" for="form3Example1c">비밀번호</label>
+	                      <label class="form-label" for="form3Example1c">*비밀번호</label>
 	                      <input type="text" id="pw2" name="pw2" class="form-control" required/>
-	                      <label class="form-label" for="form3Example1c">비밀번호 확인</label>
+	                      <label class="form-label" for="form3Example1c">*비밀번호 확인</label>
 	                      <div id="msg2"></div>
 	                    </div>
 	                  </div>
@@ -58,7 +58,7 @@
 	                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
 	                    <div class="form-outline flex-fill mb-0">
 	                      <input type="text" id="name" name="name" class="form-control" required/>
-	                      <label class="form-label" for="form3Example3c">이름</label>
+	                      <label class="form-label" for="form3Example3c">*이름</label>
 	                    </div>
 	                  </div>
 	
@@ -66,21 +66,21 @@
 	                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
 	                    <div class="form-outline flex-fill mb-0">
 	                      <input type="email" id="email" name="email" class="form-control" required/>
-	                      <label class="form-label" for="form3Example3c">이메일</label>
+	                      <label class="form-label" for="form3Example3c">*이메일</label>
 	                    </div>
 	                  </div>
 					  
 					  <div class="d-flex flex-row align-items-center mb-4">
 	                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
 	                    <div class="form-outline flex-fill mb-0">
-                      		<input type="text" name="addr1" class="form-control" id="addr1" placeholder="기본주소 입력" maxlength="150" required readonly><br><br>
-		      				<input type="text" name="addr2" class="form-control" id="addr2" placeholder="상세주소 입력" maxlength="90" required><br><br>
-		      				<input type="text" name="postcode" class="form-control" id="postcode" placeholder="우편번호 입력" maxlength="9" required readonly>
+	                    	<input type="text" name="postcode" class="form-control" id="postcode" placeholder="우편번호" maxlength="9" required readonly>
+                      		<input type="text" name="addr1" class="form-control" id="addr1" placeholder="기본주소" maxlength="150" required readonly><br><br>
+		      				<input type="text" name="addr2" class="form-control" id="addr2" placeholder="상세주소를 입력해 주세요" maxlength="90" required><br><br>
 		      				<input type="button" id="isAddrBtn" class="form-control" value="주소 입력" onclick="findAddr()">
 		      				<input type="hidden" name="address" id="address" />
 		      				<input type="hidden" name="addrck" id="addrck" value="no"/>
 		      				 <button type="button" class="btn btn-primary" id="addrbtn">상세정보 입력 후 클릭</button>
-		      				 <p id="addrmsg" style="color:red;">주소입력이 되지 않았습니다. </p>
+		      				 <p id="addrmsg" style="color:red;">주소 입력이 되지 않았습니다. </p>
 	                    </div>
 	                  </div>
 					  
@@ -88,7 +88,7 @@
 	                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
 	                    <div class="form-outline flex-fill mb-0">
 	                      <input type="tel" id="tel" name="tel" class="form-control" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}" maxlength="19" required/>
-	                      <label class="form-label" for="form3Example3c">전화번호</label>
+	                      <label class="form-label" for="form3Example3c">*전화번호</label>
 	                    </div>
 	                  </div>
 	
@@ -120,8 +120,42 @@
 	  </div>
 	</section>
 	<script>
+    //주소 스크립트
+	function findAddr() {
+		new daum.Postcode({
+			oncomplete: function(data) {
+				console.log(data);
+				var roadAddr = data.roadAddress;
+				var jibunAddr = data.jibunAddress;
+				document.getElementById("postcode").value = data.zonecode;
+				if(roadAddr !== '') {
+					document.getElementById("addr1").value = roadAddr;				
+				} else if(jibunAddr !== ''){
+					document.getElementById("addr1").value = jibunAddr;
+				} 
+			}
+		}).open();
+	}
+	$(document).ready(function(){
+		$("#addrbtn").click(function(){
+			var addr1 = $("#addr1").val();
+			var addr2 = $("#addr2").val();
+			var postcode = $("#postcode").val();
+			if(addr1!='' && addr2!='' && postcode!=''){
+				$("#address").val(postcode+" ,"+addr1+" ,"+addr2);
+				$("#addrmsg").html("<strong>성공적으로 주소가 입력되었습니다.</strong>").css("color","blue");
+				$("#addrck").val("yes");
+			}
+		});
+		$("#addr2").keyup(function(){
+			$("#addrck").val("no");
+			$("#addrmsg").html("<strong>주소가 정상적으로 입력되지 않았습니다.</strong>").css("color","red");
+		});
+	});
+	</script>
+	<script>
 	 $(document).ready(function(){
-		 
+		 //아이디 관련 스크립트
 		 $("#id").keyup(function(){
 			$("#idck").val("no");
 			if($(this).val()!=""){			
@@ -160,7 +194,7 @@
 				}
 			});
 		});
-		 
+	 //비밀번호 관련 스크립트	 
 	 var pwck = false;	 
 	 $("#pw1 , #pw2").keyup(function(){
 		 var pw = $("#pw").val();
@@ -172,9 +206,12 @@
 			 $("#msg2").html("비밀번호가 일치합니다.").css("color","blue");
 			 pwck = true;
 		 }
-		
 	 });
-		 
+	 
+	});
+	</script>
+	<script>
+	//최종 확인 스크립트	 
 	 function joinck(f){
 		 if($("#idck").val()=='no'){
 			 alert("아이디 중복체크가 되지 않았습니다.");
@@ -192,11 +229,7 @@
 			 return false;
 		 }
 	 };
-		 
-		 
-	});
-	</script>
-	<script>
+	 
     $(document).ready(function(){
     	var result2 = '${loginck}';
     	if(result2=='회원가입 실패'){
@@ -204,41 +237,6 @@
     	}	
     });
     </script>
-    
-    <script>
-	function findAddr() {
-		new daum.Postcode({
-			oncomplete: function(data) {
-				console.log(data);
-				var roadAddr = data.roadAddress;
-				var jibunAddr = data.jibunAddress;
-				document.getElementById("postcode").value = data.zonecode;
-				if(roadAddr !== '') {
-					document.getElementById("addr1").value = roadAddr;				
-				} else if(jibunAddr !== ''){
-					document.getElementById("addr1").value = jibunAddr;
-				} 
-			}
-		}).open();
-	}
-	$(document).ready(function(){
-			$("#addrbtn").click(function(){
-				var addr1 = $("#addr1").val();
-				var addr2 = $("#addr2").val();
-				var postcode = $("#postcode").val();
-				if(addr1!='' && addr2!='' && postcode!=''){
-					$("#address").val(postcode+" ,"+addr1+" ,"+addr2);
-					$("#addrmsg").html("<strong>성공적으로 주소가 입력되었습니다.</strong>").css("color","blue");
-					$("#addrck").val("yes");
-				}
-		});
-		$("#addr2").keyup(function(){
-			$("#addrck").val("no");
-			$("#addrmsg").html("<strong>주소가 정상적으로 입력되지 않았습니다.</strong>").css("color","red");
-		});
-	});
-	
-	</script>
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<jsp:include page="../common/footer.jsp" />
 </body>
