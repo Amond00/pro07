@@ -68,7 +68,6 @@
             <p>
           	  03172 서울특별시 종로구 사직로8길 60 | <br> (여권영사민원실) 서울특별시 서초구 남부순환로 2558 외교타운 6층<br>
               <strong>Phone:</strong> 02.2100.2114(주간),<br> 02.3210.0404(영사콜센터, 24시간)<br>
-              <strong>Email:</strong> dhlryqn@naver.com<br>
             </p>
 
           </div>
@@ -79,10 +78,9 @@
 				- 누리집 저작권은 환경부에 있습니다.
             </p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://twitter.com/mevpr" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/mevpr" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/ministry_environment/" class="instagram"><i class="bx bxl-instagram"></i></a>
             </div>
           </div>
 

@@ -1,5 +1,7 @@
 package kr.go.gov.model;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -25,5 +27,10 @@ public class MemberDAOImpl implements MemberDAO {
 	@Override
 	public void join(MemberDTO dto) throws Exception {
 		sqlSession.insert("member.join", dto);
+	}
+	
+	@Override
+	public List<MemberDTO> memberList() throws Exception {
+		return sqlSession.selectList("member.memberList");
 	}
 }

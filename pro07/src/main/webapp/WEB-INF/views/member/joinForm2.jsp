@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>회원가입</title>
     <jsp:include page="../common/head.jsp" />
-
 </head>
 <body>
 	<jsp:include page="../common/header.jsp" />
@@ -120,7 +119,7 @@
 	  </div>
 	</section>
 	<script>
-    //주소 스크립트
+    //주소관련 스크립트
 	function findAddr() {
 		new daum.Postcode({
 			oncomplete: function(data) {
@@ -230,12 +229,6 @@
 		 }
 	 };
 	 
-    $(document).ready(function(){
-    	var result2 = '${loginck}';
-    	if(result2=='회원가입 실패'){
-    		alert('회원가입 실패');
-    	}	
-    });
     </script>
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<jsp:include page="../common/footer.jsp" />

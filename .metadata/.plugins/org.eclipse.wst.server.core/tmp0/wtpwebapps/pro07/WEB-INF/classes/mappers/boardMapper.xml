@@ -5,7 +5,7 @@
 <mapper namespace="board">
 	<!-- 공지사항 -->
 	<select id="boardList" resultType="kr.go.gov.dto.BoardDTO">
-		select * from board
+		select * from board order by resdate desc
 	</select>
 	<update id="boardVisitedUp">
 		update board set visited=visited+1 where no=#{no}
@@ -25,7 +25,7 @@
 	
 	<!-- 자유게시판  -->	
 	<select id="boardList2" resultType="kr.go.gov.dto.BoardDTO2">
-		select * from board2
+		select * from board2 order by resdate desc
 	</select>
 	<update id="boardVisitedUp2">
 		update board2 set visited=visited+1 where no=#{no}
@@ -45,7 +45,7 @@
 	
 	<!-- QnA게시판 -->
 	<select id="boardList3" resultType="kr.go.gov.dto.BoardDTO3">
-		select * from board3 where lev=0
+		select * from board3 where lev=0 order by resdate desc 
 	</select>
 	<update id="boardVisitedUp3">
 		update board3 set visited=visited+1 where no=#{no}

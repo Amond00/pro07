@@ -1,5 +1,7 @@
 package kr.go.gov.service;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
@@ -25,6 +27,11 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public void join(MemberDTO dto) throws Exception{
 		memberDAO.join(dto);
+	}
+	
+	@Override
+	public List<MemberDTO> memberList() throws Exception{
+		return memberDAO.memberList();
 	}
 	
 }

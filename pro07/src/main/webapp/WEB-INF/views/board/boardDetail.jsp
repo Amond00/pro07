@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
+<c:if test="${not empty sid}">
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,3 +61,13 @@
 	<jsp:include page="../common/footer.jsp" />
 </body>
 </html>
+</c:if>
+<c:if test="${empty sid}">
+<script>
+    window.setTimeout(function(){
+        alert("로그인시 열람할 수 있습니다");
+        location.href="/";
+    });
+</script>
+</c:if>
+    

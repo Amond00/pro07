@@ -12,4 +12,7 @@
 	<insert id="join">
 		insert into member values (#{id}, #{pw}, #{name}, #{email}, #{address}, #{tel}, default, default)
 	</insert>
+	<select id="memberList" resultType="kr.go.gov.dto.MemberDTO">
+		select * from member
+	</select>
 </mapper>

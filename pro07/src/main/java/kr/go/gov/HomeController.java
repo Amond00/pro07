@@ -1,14 +1,12 @@
 package kr.go.gov;
 
 
-import java.io.PrintWriter;
 import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,15 +28,6 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value="main_board.do", method = RequestMethod.GET)
-	@ResponseBody
-	public void mainBoard(HttpServletResponse response, HttpServletRequest request, RedirectAttributes rttr) throws Exception{
-		List<BoardDTO> list = boardService.boardList(); 
-		JSONObject json = new JSONObject();
-		json.put("list", list);
-		PrintWriter out = response.getWriter();
-		out.println(json);
-	}
 	
 	@GetMapping(value="main_board2.do")
 	@ResponseBody
@@ -47,4 +36,5 @@ public class HomeController {
 		return list;
 
 	}
+
 }

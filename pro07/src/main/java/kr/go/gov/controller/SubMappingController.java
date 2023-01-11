@@ -12,5 +12,6 @@ public class SubMappingController {
 	public String portfoli() throws Exception {
 		return "sub/portfolio";
 	}
+
 		
 }

@@ -1,0 +1,10 @@
+package kr.go.gov.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class PicController {
+	int maxSize = 10*1024*1024;
+	String saveFolder = "D:/hth/pro01/pro03/webapps/upload"; //개발자 디렉토리
+	String uploadPath = request.getRealPath("/upload"); //서버 디렉토리
+}

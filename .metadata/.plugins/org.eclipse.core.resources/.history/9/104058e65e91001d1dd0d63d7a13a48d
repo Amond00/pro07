@@ -1,0 +1,22 @@
+package kr.go.gov;
+
+@Controller
+public class HomeController {
+	
+	@Inject
+	BoardService boardService;
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home() throws Exception {		
+		return "home";
+	}
+	
+	
+	@GetMapping(value="main_board2.do")
+	@ResponseBody
+	public List<BoardDTO> mainBoard2(HttpServletResponse response, HttpServletRequest request, RedirectAttributes rttr) throws Exception{
+		List<BoardDTO> list = boardService.boardList(); 
+		return list;
+
+	}
+}
