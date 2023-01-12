@@ -1,5 +1,0 @@
-package kr.go.gov.service;
-
-public interface BoardService {
-	public List<BoardDTO> boardlist();
-}

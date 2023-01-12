@@ -108,11 +108,11 @@ public class MemberController {
 	public String sha() throws Exception {
 		return "member/shatest";
 	}
-	@RequestMapping(value="sha256", method=RequestMethod.POST)
-	public String sha256(HttpServletRequest request) throws Exception {
+	@PostMapping(value="sha256")
+	public String sha256(HttpServletRequest request,Model model) throws Exception {
 		String pw = request.getParameter("pw");
 		String pwd = SHA256.encrypt(pw);
-		System.out.println(pwd);
+		model.addAttribute(pwd);
 		return "home";
 	}
 

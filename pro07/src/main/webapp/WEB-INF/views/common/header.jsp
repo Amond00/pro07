@@ -14,12 +14,12 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li><a class="active" href="/" style="color:white">Home</a></li>
-        <li><a class="active" href="/sub/portfolio" style="color:white">포트폴리오</a></li>
-        
+<!--         <li><a class="active" href="/sub/portfolio" style="color:white">포트폴리오</a></li>
+ -->        
         <li class="dropdown"><a href="#" style="color:white"><span>사이트 관리</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="/admin/adminPage">괸리자 메뉴</a></li>
-            <li><a href="#">Drop Down 2</a></li>
+            <!-- <li><a href="#">Drop Down 2</a></li>
             <li><a href="#">Drop Down 3</a></li>
             <li class="dropdown"><a href="#"><span>관리자</span> <i class="bi bi-chevron-right"></i></a>
               <ul>
@@ -29,7 +29,7 @@
                 <li><a href="#">Deep Drop Down 4</a></li>
                 <li><a href="#">Deep Drop Down 5</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </li>
         <li class="dropdown"><a href="#" style="color:white"><span>회원기능</span> <i class="bi bi-chevron-down"></i></a>

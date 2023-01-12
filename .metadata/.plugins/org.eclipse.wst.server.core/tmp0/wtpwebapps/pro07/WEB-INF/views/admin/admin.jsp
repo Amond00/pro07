@@ -48,6 +48,11 @@
 				      	<tbody class="boards">
 				      	</tbody>
 			      	</table>
+			      	<div class="button-group" style="margin-top:5px; ">
+			      	</div>
+			      	<div class="button-group2" style="margin-top:5px; ">
+			      		<a class="btn btn-danger delete">삭제</a>
+			      	</div>
 		        	<script>
 				  	$(document).ready(function(){
 				  		$(".dataTables_empty").remove();
@@ -56,6 +61,7 @@
 				  		$(".board, .board2, .board3").click(function(){
 				  			$(".boardsh *").remove();
 				  			$(".boards *").remove();
+					  		$(".button-group *").remove();
 							var datah = "<tr><th>체크</th><th>번호</th><th>제목</th><th>작성자</th><th>작성일</th></tr>";
 							$(".boardsh").append(datah);
 				  			var bc = $(this).attr('class');
@@ -75,9 +81,11 @@
 								dataType:"json",//데이터 반환 방식
 								success:function(list){	
 									$.each(list, function(k, v){
-										var data = "<tr><td><input type='checkbox' name='chk'></td><td>"+ k +"</td>"
+										var data = "<tr><td><input type='checkbox' name='chk' class='chk' value="+v.no+"></td><td>"+ k +"</td>"
 										data = data+"<td><a href='"+detailUrl+v.no+"'>"+v.title+"</a></td><td>"+v.author+"</td><td>"+v.resdate+"</td></tr>"
 										$(".boards").append(data);
+										var button = "<a class='btn btn-danger' href='${path1 }/board/delete.do?no="+v.no+"' style='display:none;'>글 삭제</a>"
+										$(".button-group").append(button);
 									});
 								}
 							});
@@ -85,7 +93,9 @@
 						$(".member").click(function(){
 							$(".boardsh *").remove();
 				  			$(".boards *").remove();
+				  			$(".button-group *").remove();
 							var datah = "<tr><th>체크</th><th class='idth'>아이디</th><th class='nameth'>이름</th><th class='emailth'>이메일</th><th class='addressth'>주소</th><th class='telth'>전화번호</th><th class='regdateth'>가입일</th><th class='visitedth'>방문횟수</th></tr>";
+							var button = ""
 							$(".boardsh").append(datah);
 							$.ajax({
 								url:"/admin/memlist.do",	
@@ -93,7 +103,6 @@
 								dataType:"json",//데이터 반환 방식
 								success:function(list){	
 									$.each(list, function(k, v){
-										console.log(v);
 										var data = "<tr><td><input type='checkbox' name='chk'></td>"
 										data = data+"<td>"+v.id+"</td><td>"+v.name+"</td><td>"+v.email+"</td><td>"+v.address+"</td><td>"+v.tel+"</td><td>"+v.regdate+"</td><td>"+v.visited+"</td></tr>"
 										$(".boards").append(data);
@@ -101,9 +110,18 @@
 								}
 							});
 						});
-						$(".delbtn").click(function(){
-							
+						var chkarr = [];
+						$(".delete").click(function(){
+			                var no = $(".chk[type=checkbox]:checked").attr("value");
+			                var ckno = $('input:checkbox[name=chk]:checked').length;
+			                $('input:checkbox[name=chk]:checked').each(function(){
+		                		var chkval = $(this).attr("value");
+								chkarr.push(chkval);
+								alert(chkarr);
+		                	});
+			                $("")
 						});
+		                
 					});
 				  	</script>
                 </div>

@@ -83,6 +83,7 @@
 		      <hr>
 		      <div class="button-group" style="margin-top:5px; ">
 		      		<a class="btn btn-primary" href="${path1 }/board/list3.do">목록으로 돌아가기</a>
+		      		<!-- 답변 전에만 수정 가능 -->
 		      	<c:if test="${empty dto2}">
 		      		<a class="btn btn-primary" href="${path1 }/board/updateForm3.do?parno=${dto1.parno}">질문글 수정</a>
 		      	</c:if>

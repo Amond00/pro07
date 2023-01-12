@@ -178,14 +178,14 @@ public class BoardController {
 	}
 	//답변 글 작성
 	@GetMapping("insertForm3_1.do")
-	public String boardInsertForm3_1(HttpServletRequest request,Model model) throws Exception{
+	public String boardInsertForm31(HttpServletRequest request,Model model) throws Exception{
 		int parno = Integer.parseInt(request.getParameter("parno"));
 		BoardDTO3 dto1 = boardService.boardDetail3(parno);
 		model.addAttribute("dto1", dto1);
 		return "board/boardInsert3_1";
 	}
 	@PostMapping("insert3_1.do")
-	public String boardInsert3_1(HttpServletRequest request, BoardDTO3 dto) throws Exception {
+	public String boardInsert31(HttpServletRequest request, BoardDTO3 dto) throws Exception {
 		int parno = Integer.parseInt(request.getParameter("parno"));
 		dto.setTitle(request.getParameter("title"));
 		dto.setContent(request.getParameter("content"));
@@ -204,7 +204,7 @@ public class BoardController {
 		return "board/boardUpdate3";
 	}
 	@GetMapping("updateForm3_1.do")
-	public String boardUpdateForm3_1(HttpServletRequest request, Model model) throws Exception{
+	public String boardUpdateForm31(HttpServletRequest request, Model model) throws Exception{
 		int parno = Integer.parseInt(request.getParameter("parno"));
 		BoardDTO3 dto = boardService.boardDetail3_1(parno);
 		model.addAttribute("dto", dto);

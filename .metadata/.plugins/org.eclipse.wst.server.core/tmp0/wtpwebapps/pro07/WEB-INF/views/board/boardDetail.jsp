@@ -51,10 +51,13 @@
 	      	</tbody>
 	      </table>
 	      <hr>
+	      
 	      <div class="button-group" style="margin-top:5px; ">
 			  <a class="btn btn-primary" href="${path1 }/board/list.do">목록으로 돌아가기</a>
+			  <c:if test="${sid eq 'admin'}">
 			  <a class="btn btn-primary" href="${path1 }/board/updateForm.do?no=${dto.no}">글 수정</a>
 			  <a class="btn btn-primary" href="${path1 }/board/delete.do?no=${dto.no}">글 삭제</a>
+			  </c:if>
 	      </div>	
      	</div>
      </section>
