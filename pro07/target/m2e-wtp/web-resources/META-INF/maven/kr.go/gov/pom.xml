@@ -114,8 +114,18 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.13</version>
-		</dependency>  
-		
+		</dependency>
+		<dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-all</artifactId>
+		    <version>1.9.5</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+		    <version>5.7.0</version>
+		</dependency>
+		  		
 		<!-- spring-test -->
 		<dependency>
 		    <groupId>org.springframework</groupId>

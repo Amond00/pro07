@@ -8,28 +8,28 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="visited"/>
+		<item key="selection" value="gov"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="gov"/>
+			<item value="urlno"/>
+			<item value="maria"/>
+			<item value="myba"/>
+			<item value="button-"/>
+			<item value="button"/>
+			<item value="buuton"/>
+			<item value="spring"/>
+			<item value="test"/>
+			<item value="scipe"/>
+			<item value="junit"/>
+			<item value="runtime"/>
 			<item value="visited"/>
 			<item value="#navbar-items"/>
 			<item value="#navbar a"/>
-			<item value="white"/>
-			<item value="color"/>
-			<item value="navbar-items"/>
-			<item value="&#x09;&lt;jsp:include page=&quot;../common/footer.jsp&quot; /&gt;"/>
-			<item value="20%"/>
-			<item value="background"/>
-			<item value="hover"/>
-			<item value="4f4"/>
-			<item value="4fa"/>
-			<item value="navbar"/>
-			<item value="10px"/>
-			<item value="padding"/>
 		</list>
 		<list key="replacehistory">
 			<item value="8.2%"/>
@@ -39,10 +39,10 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1113"/>
-		<item key="DIALOG_Y_ORIGIN" value="669"/>
-		<item key="DIALOG_WIDTH" value="288"/>
-		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_X_ORIGIN" value="0"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="1936"/>
+		<item key="DIALOG_HEIGHT" value="1096"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>
