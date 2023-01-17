@@ -19,7 +19,6 @@
 		#topnavbar { margin-left:90px; }
 		
 	</style>
-	
 </head>
 <body>
 	<jsp:include page="../common/header.jsp" />
@@ -137,7 +136,7 @@
 <c:if test="${sid ne 'admin'}">
 <script>
     window.setTimeout(function(){
-        alert("접근이 허용되지 않았습니다.");
+        alert("허용되지 않은 접근입니다.");
         location.href="/";
     });
 </script>

@@ -9,4 +9,7 @@
 	<select id="getSample" resultType="kr.go.gov.dto.SampleDTO">
 		select * from sample where id=#{id}
 	</select>
+	<insert id="addSample">
+		insert into sample values(#{id}, #{pw})
+	</insert>
 </mapper>

@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>자유게시판</title>
+	<title>QnA 게시판</title>
     <jsp:include page="../common/head.jsp" />
     <style>
     	th{background-color:#17455e; color:white; }
@@ -19,7 +19,7 @@
 	<jsp:include page="../common/header.jsp" />
 	<section class="content">
 		<div class="container">
-		      <h2 style="text-align: center;">자유게시판 수정</h2>
+		      <h2 style="text-align: center;">QnA 질문 글 수정</h2>
 		      <hr>
 		      <form action="/board/update2.do" method="post">
 			      <table class="tb">
@@ -46,7 +46,7 @@
 		      </form>
 		      <hr>
 		      <div class="button-group" style="margin-top:5px; ">
-				  <a class="btn btn-primary" href="${path1 }/board/list2.do">목록으로 돌아가기</a>
+				  <a class="btn btn-primary" href="${path1 }/board/list3.do">목록으로 돌아가기</a>
 		      </div>
 		</div>
 	</section>	

@@ -42,8 +42,8 @@ public class MemberController {
 		dto.setId(id);
 		String pwd = SHA256.encrypt(pw);
 		dto.setPw(pwd);
-		
 		MemberDTO login = memberService.login(dto);
+		memberService.MemberVisitedUp(id);
 		if(login!=null) {
 			session.setAttribute("member", login);
 			session.setAttribute("sid", id);

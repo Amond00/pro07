@@ -61,10 +61,10 @@
 		select max(no)+1 as parno from board3
 	</select>
 	<insert id="boardInsert3">
-		insert into board3 values(default, #{title}, #{content}, #{author},default,0, #{parno},default)
+		insert into board3 values(default, #{title}, #{content}, #{author}, default, 0, #{parno}, default)
 	</insert>
 	<insert id="boardInsert3_1">
-		insert into board3 values(default, #{title}, #{content}, author=#{author},default,1, #{parno} ,default)
+		insert into board3 values(default, #{title}, #{content}, author=#{author}, default, 1, #{parno} ,default)
 	</insert>
 	<update id="boardUpdate3">
 		update board3 set title=#{title}, content=#{content} where parno=#{parno} and lev=0

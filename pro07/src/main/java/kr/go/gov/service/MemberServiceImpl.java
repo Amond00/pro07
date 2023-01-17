@@ -20,6 +20,11 @@ public class MemberServiceImpl implements MemberService {
 	}
 	
 	@Override
+	public void MemberVisitedUp(String id) throws Exception{
+		memberDAO.MemberVisitedUp(id);
+	}
+	
+	@Override
 	public MemberDTO idck(String id) throws Exception{
 		return memberDAO.idck(id);
 	}

@@ -21,6 +21,11 @@ public class MemberDAOImpl implements MemberDAO {
 	}
 	
 	@Override
+	public void MemberVisitedUp(String id) throws Exception{
+		sqlSession.update("member.memberVisitedUp", id);
+	}
+	
+	@Override
 	public MemberDTO idck(String id) throws Exception {	
 		return sqlSession.selectOne("member.idck", id);
 	}

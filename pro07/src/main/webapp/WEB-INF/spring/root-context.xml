@@ -22,22 +22,21 @@
 		<property name="password" value="a1234"></property>
 	</bean>
 	
+	<!-- MyBatis 설정 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocation" value="classpath:/mybatis-config.xml"></property>
 		<property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml"></property>
 	</bean>
-	
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
 	</bean>	
 	
+	<!-- 트렌젝션 및 DB패키지 방안 및 각종 로깅 보안 설정 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	<!-- @Transaction 처리 가능 -->
 	<tx:annotation-driven transaction-manager="transactionManager"/>
-	
-	<!-- 메일 서버 설정 : javax-mail 라이브러리 -->
-	
+		
 </beans>
