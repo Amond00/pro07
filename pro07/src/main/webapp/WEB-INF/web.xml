@@ -42,5 +42,13 @@
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-    
+    <!-- PUT DELETE 사용 히든 메소드 필터-->
+    <filter>
+    	<filter-name>httpMethodFilter</filter-name>
+    	<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+    <filter-mapping>
+    	<filter-name>httpMethodFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
