@@ -1,9 +1,7 @@
 package kr.go.gov.sample;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +15,6 @@ public class SampleService{
 	public List<SampleDTO> sampleList() throws Exception {
 		return sampleDAO.sampleList();
 	}
-
 	public SampleDTO getSample(String id) throws Exception {
 		return sampleDAO.getSample(id);
 	}

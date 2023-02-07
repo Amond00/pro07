@@ -5,7 +5,6 @@ import javax.inject.Inject;
 import static org.junit.Assert.fail;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
-import org.junit.Assert;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,7 +26,6 @@ public class DAOTest {
 				cnt = daoCall();
 				logger.info("DAO 단위 테스트가 성공적으로 처리되었음");
 				logger.info("회원수 : "+cnt);
-	/*			Assert.assertEquals(cnt, 8); */
 			} catch (Exception e) {
 				logger.info("DAO 단위 테스트가 실패 되었습니다.");
 				fail("DAO 단위 테스트 실패");

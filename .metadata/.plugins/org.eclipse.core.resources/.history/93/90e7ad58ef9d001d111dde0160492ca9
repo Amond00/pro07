@@ -1,0 +1,50 @@
+package kr.go.gov.sample;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+@RequestMapping("/sample/")
+public class SampleController {
+	
+	private static final Logger log = LoggerFactory.getLogger(SampleController.class);	
+	@Autowired
+	SampleService sampleService;
+	
+	@Inject
+	SampleDAO sampleDAO;
+	
+	@GetMapping("list")
+	public String sampleList(Model model) throws Exception {
+		List<SampleDTO> sampleList = sampleService.sampleList();
+		model.addAttribute("sampleList", sampleList);
+		return "sample/list";
+	}
+	
+	
+	@GetMapping("getSample")
+	public String getSampleServcie(@RequestParam String id, Model model) throws Exception {
+		log.info("id : "+id);
+		SampleDTO sample = sampleService.getSample(id);
+		model.addAttribute("sample", sample);
+		return "sample/getSample";
+	}
+	
+	@GetMapping("getSampleDAO")
+	public String getSampleDAO(@RequestParam String id, Model model) {
+		SampleDTO sample = sampleDAO.getSample(id);
+		model.addAttribute("sample", sample);
+		return "sample/getSample";
+		
+	}
+}

@@ -32,7 +32,7 @@
 	<hr>
 	<h2>PUT 방식</h2>
 	<form name="updateSample" action="update" method="post">
-		<input type="hidden" name="_method" value="PUT"/>
+		<input type="hidden" name="_method" value="put"/>
 		<input type="text" id="id" name="id" value="kkt"><br>
 		<input type="password" id="pw" name="pw" value="123456"><br><br>
 		<input type="submit" value="수정">

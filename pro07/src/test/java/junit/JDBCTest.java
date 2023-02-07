@@ -1,4 +1,3 @@
-
 package junit;
 
 import java.sql.Connection;
@@ -27,7 +26,7 @@ public class JDBCTest {
 	@Test
 	public void sqlConnectionTest() throws SQLException {
 		Connection con = dataSource.getConnection();
-		logger.info(con.toString());
+		logger.info("JDBCTest_Success"+con.toString());
 		con.close();
 	}
 

@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.maven.model.Model;
@@ -18,7 +20,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -103,7 +104,7 @@ public class RestController {
 	
 	// 샘플 수정
 	// uri:localhost:8097/update/{id}	
-	@PutMapping("update")
+	@PutMapping("update/{id}/{pw}")
 	@ResponseBody
 	public String updateSample(@ModelAttribute("sample") SampleDTO sample) throws Exception {
 		restService.updateSample(sample);

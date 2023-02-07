@@ -22,14 +22,12 @@ public class MyBatisTest {
 	private static final Logger logger = LoggerFactory.getLogger(MyBatisTest.class);
 
 	@Inject
-	SqlSession sqls;
+	SqlSession sql;
 
 
 	@Test
 	public void mybatisTest() throws Exception {
-		List<SampleDTO> sampleList = sqls.selectList("sample.sampleList");
-		logger.info(sampleList.toString());
-		System.out.println("리스트 : " + sampleList.toString());
-		sqls.close();
+		List<SampleDTO> sampleList = sql.selectList("sample.sampleList");
+		logger.info("JDBCTest_Success : "+sampleList.toString());
 	}
 }
